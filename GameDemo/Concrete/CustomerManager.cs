@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using GameDemo.Entities;
 using GameDemo.ProjectServices;
 
-namespace GameDemo.ManagementService
+namespace GameDemo.Concrete
 {
     class CustomerManager:ICustomerService
     {
@@ -22,7 +23,7 @@ namespace GameDemo.ManagementService
             }
             else
             {
-                Console.WriteLine($"Addition was completed! Welcome {customer.firstName} {customer.lastName}");
+                Console.WriteLine($"Addition was completed! Welcome {customer.FirstName} {customer.LastName}");
             }
         }
 
@@ -38,30 +39,30 @@ namespace GameDemo.ManagementService
                 case 1:
                     Console.WriteLine("Enter your new First Name: ");
                     firstname = Convert.ToString(Console.ReadLine());
-                    customer.firstName = firstname;
-                    Console.WriteLine("Your first name was updated! \n Your new first name is: {0}",customer.firstName);
+                    customer.FirstName = firstname;
+                    Console.WriteLine("Your first name was updated! \n Your new first name is: {0}",customer.FirstName);
                     break;
                 case 2:
                     Console.WriteLine("Enter your new Last Name");
                     lastname = Convert.ToString(Console.ReadLine());
-                    customer.lastName = lastname;
-                    Console.WriteLine("Your last name was updated! \n Your new last name is {0}",customer.lastName);
+                    customer.LastName = lastname;
+                    Console.WriteLine("Your last name was updated! \n Your new last name is {0}",customer.LastName);
                     break;
                 case 3:
                     Console.WriteLine("Enter your new date of birth");
                     birthdate = Convert.ToInt32(Console.ReadLine());
-                    customer.birthdate = birthdate;
-                    Console.WriteLine("Your date of birth was updated! \n Your new date of birth is {0}",customer.birthdate);
+                    customer.Birthdate = birthdate;
+                    Console.WriteLine("Your date of birth was updated! \n Your new date of birth is {0}",customer.Birthdate);
                     break;
                 case 4:
                     Console.WriteLine("First, enter your old password");
                     password = Convert.ToString(Console.ReadLine());
-                    if (customer.password.Equals(password))
+                    if (customer.Password.Equals(password))
                     {
                         Console.WriteLine("Enter your new password");
                         password = Convert.ToString(Console.ReadLine());
-                        customer.password = password;
-                        Console.WriteLine("Your password was updated! \n Your new password is {0}",customer.password);
+                        customer.Password = password;
+                        Console.WriteLine("Your password was updated! \n Your new password is {0}",customer.Password);
                     }
                     else
                     {
@@ -81,7 +82,7 @@ namespace GameDemo.ManagementService
             //burada da girilen kullanıcının kayıtlı olup olmadığını ve kayıtlıysa silinmesini sağlıyoruz:
             if (_userValidation.Validation(customer) == true)
             {
-                Console.WriteLine($"{customer.firstName} {customer.lastName} was deleted!");
+                Console.WriteLine($"{customer.FirstName} {customer.LastName} was deleted!");
             }
             else
             {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using GameDemo.Entities;
-using GameDemo.ProjectEntities;
+using GameDemo.Entities;
 
 namespace GameDemo.ProjectServices
 {

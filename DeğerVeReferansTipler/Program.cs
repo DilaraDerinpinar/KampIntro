@@ -2,6 +2,7 @@
 
 namespace DeğerVeReferansTipler
 {
+    //3.DERS 16 OCAK 2021
     class Program
     {
         static void Main(string[] args)

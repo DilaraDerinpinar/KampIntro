@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using GameDemo.ManagementService;
+using GameDemo.Concrete;
+using GameDemo.Entities;
+using GameDemo.Concrete;
 using GameDemo.ProjectServices;
 
-namespace GameDemo.ProjectManagementService
+namespace GameDemo.Concrete
 {
     class UserValidationManager:IUserValidationService
     {
         public bool Validation(Customer customer)
         {
-            if (customer.firstName.Equals("John") && customer.lastName.Equals("Degree") && customer.id == 1 && customer.password.Equals("123456"))
+            if (customer.FirstName.Equals("John") && customer.LastName.Equals("Degree") && customer.Id == 1 && customer.Password.Equals("123456"))
             {
                 return true;
             }

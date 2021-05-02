@@ -1,8 +1,8 @@
 ﻿using System;
 using GameDemo.Entities;
-using GameDemo.ManagementService;
-using GameDemo.ProjectEntities;
-using GameDemo.ProjectManagementService;
+using GameDemo.Concrete;
+using GameDemo.Entities;
+using GameDemo.ProjectServices;
 
 namespace GameDemo
 {
@@ -38,13 +38,13 @@ namespace GameDemo
             //MÜŞTERİ OLUŞTURDUM VE DAHA SONRA MÜŞTERİLERİN KAYITLI OLUP OLMADIKLARINI KONTROL ETTİM//
             Customer customer1 = new Customer()
             {
-                firstName = "donald", lastName = "george", password = "12345699", birthdate = 1996, id = 2
+                FirstName = "donald", LastName = "george", Password = "12345699", Birthdate = 1996, Id = 2
             };
             CustomerManager customerManager1 = new CustomerManager(new UserValidationManager());
 
             Customer customer2 = new Customer()
             {
-                firstName = "John", lastName = "Degree", password = "123456", id = 1, birthdate = 1999
+                FirstName = "John", LastName = "Degree", Password = "123456", Id = 1, Birthdate = 1999
             };
             CustomerManager customerManager2 = new CustomerManager(new UserValidationManager());
             //******************************************************************************************
@@ -52,12 +52,12 @@ namespace GameDemo
             //OYUN OLUŞTURDUM VE OYUNLARDA EKLEME SİLME GÜNCELLEME İŞLEMLERİ YAPTIM:
             Game game1 = new Game()
             {
-                gameID = 1, gameName = "among us", gamePrice = 12
+                GameID = 1, GameName = "among us", GamePrice = 12
             };
 
             Game game2 = new Game()
             {
-                gameID = 2, gameName = "temple run", gamePrice = 10
+                GameID = 2, GameName = "temple run", GamePrice = 10
             };
 
 
@@ -72,12 +72,12 @@ namespace GameDemo
             //İNDİRİMLERİ TANIMLADIM VE EKLEME SİLME GÜNCELLEME İŞLEMLERİNİ GERÇEKLEŞTİRDİM
             Campaign campaign1 = new Campaign()
             {
-                campaignName = "black friday indirimi", campaignDiscountRate = 30, campaignId = 7
+                CampaignName = "black friday indirimi", CampaignDiscountRate = 30, CampaignId = 7
             };
 
             Campaign campaign2 = new Campaign()
             {
-                campaignDiscountRate = 50, campaignName = "Ramazan indirimi", campaignId = 8
+                CampaignDiscountRate = 50, CampaignName = "Ramazan indirimi", CampaignId = 8
             };
 
             CampaignManager campaignManager = new CampaignManager();
@@ -92,16 +92,16 @@ namespace GameDemo
             //DAHA SONRA SATIŞLARA DAİR BİLGİLERİ TANIMLADIM:
             Sale sales1 = new Sale()
             {
-                game = game1,
-                customer = customer1,
-                discountedPrice = 8
+                Game = game1,
+                Customer = customer1,
+                DiscountedPrice = 8
             };
 
             Sale sales2 = new Sale()
             {
-                game = game2,
-                customer = customer2,
-                discountedPrice = 6
+                Game = game2,
+                Customer = customer2,
+                DiscountedPrice =  6
             };
 
             SalesManager salesManager = new SalesManager();

@@ -6,9 +6,9 @@ namespace GameDemo.Entities
 {
     class Game
     {
-        public string gameName { get; set; }
-        public int gameID { get; set; }
-        public int gamePrice { get; set; }
+        public string GameName { get; set; }
+        public int GameID { get; set; }
+        public int GamePrice { get; set; }
 
     }
 }

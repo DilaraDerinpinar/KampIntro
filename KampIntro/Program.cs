@@ -2,13 +2,15 @@
 
 namespace KampIntro
 {
+
+    //2.HAFTA 13 OCAK 2021
     class Program
     {
         static void Main(string[] args)
         {
             //type safety - tip güvenliği
             //Do not repeat yourself - Kendini tekrarlama
-            //değer tutucu, alias
+            //değer tutucu, alLias
 
             string kategoriEtiketi = "Kategoriler";
             int ogrenciSayisi = 32000;

@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using GameDemo.ProjectManagementService;
+using GameDemo.Entities;
+using GameDemo.Concrete;
 
 namespace GameDemo.ProjectServices
 {

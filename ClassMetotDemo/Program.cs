@@ -4,6 +4,7 @@ namespace ClassMetotDemo
 {
     class Program
     {
+        //3.hafta ödevi
         static void Main(string[] args)
         {
             //verileri tanımlayalım: 

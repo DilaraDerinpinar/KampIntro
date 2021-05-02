@@ -4,6 +4,7 @@ namespace E_Ticaret
 {
     class Program
     {
+        //2.hafta odevi
         static void Main(string[] args)
         {
 

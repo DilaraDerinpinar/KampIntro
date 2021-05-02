@@ -2,6 +2,7 @@
 
 namespace Donguler
 {
+    //2.HAFTA 13 OCAK 2021
     class Program
     {
         static void Main(string[] args)
